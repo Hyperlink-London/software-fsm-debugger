@@ -1,10 +1,9 @@
 import type { NodeTypes } from '@xyflow/react';
-
 import { PositionLoggerNode } from './PositionLoggerNode';
 import { AppNode } from './types';
-import nodesData from '../data/nodes.json';
+import { nodes } from '../data/fsm_diagram';
 
-export const initialNodes: AppNode[] = nodesData as unknown as AppNode[];;
+export const initialNodes: AppNode[] = nodes as unknown as AppNode[];;
 
 export const nodeTypes = {
   'position-logger': PositionLoggerNode,

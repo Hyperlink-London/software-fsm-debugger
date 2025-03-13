@@ -1,7 +1,7 @@
 import type { Edge, EdgeTypes } from '@xyflow/react';
-import edgesData from '../data/edges.json';
+import { edges } from '../data/fsm_diagram';
 
-export const initialEdges: Edge[] = edgesData;
+export const initialEdges: Edge[] = edges;
 
 export const edgeTypes = {
   // Add your custom edge types here!
