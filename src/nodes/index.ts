@@ -2,23 +2,9 @@ import type { NodeTypes } from '@xyflow/react';
 
 import { PositionLoggerNode } from './PositionLoggerNode';
 import { AppNode } from './types';
+import nodesData from '../data/nodes.json';
 
-export const initialNodes: AppNode[] = [
-  { id: 'a', type: 'input', position: { x: 0, y: 0 }, data: { label: 'Station A' } },
-  {
-    id: 'b',
-    type: 'position-logger',
-    position: { x: -100, y: 100 },
-    data: { label: 'Station C' },
-  },
-  { id: 'c', position: { x: 100, y: 100 }, data: { label: 'Station B' } },
-  {
-    id: 'd',
-    type: 'output',
-    position: { x: 0, y: 200 },
-    data: { label: 'Hub A' },
-  },
-];
+export const initialNodes: AppNode[] = nodesData as unknown as AppNode[];;
 
 export const nodeTypes = {
   'position-logger': PositionLoggerNode,
