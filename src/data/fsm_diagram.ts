@@ -13,7 +13,7 @@ export const nodes = [
   ];
   
   export const edges = [
-    { id: 'e1-2', source: 'start', target: 'idle' },
+    { id: 'e1-2',source: 'start', target: 'idle' },
     { id: 'e2-3', source: 'idle', target: 'safetyChecks', label: 'Safety Checks Button Pressed' },
     { id: 'e3-4', source: 'safetyChecks', target: 'safeToArm', label: 'Safety Checks Passes' },
     { id: 'e4-5', source: 'safeToArm', target: 'arm', label: 'Arm Button Pressed' },
@@ -22,9 +22,9 @@ export const nodes = [
     { id: 'e7-8', source: 'cruise', target: 'primaryBrake', label: 'Braking Waypoint is Reached' },
     { id: 'e8-9', source: 'primaryBrake', target: 'secondaryBrake', label: 'Speed < Brake Speed' },
     { id: 'e9-10', source: 'secondaryBrake', target: 'fullStop', label: 'Speed = 0'},
-    { id: 'abort1', source: 'idle', target: 'safeAbort', label: 'ABORT Pressed' },
-    { id: 'abort2', source: 'safetyChecks', target: 'safeAbort', label: 'ABORT Pressed' },
-    { id: 'abort3', source: 'safeToArm', target: 'safeAbort', label: 'ABORT Pressed' },
-    { id: 'abort4', source: 'arm', target: 'safeAbort', label: 'ABORT Pressed' },
-    { id: 'abort5', source: 'acceleration', target: 'safeAbort', label: 'ABORT Pressed OR Fault Condition Detected' },
+    { id: 'abort1', type: 'smoothstep', source: 'idle', target: 'safeAbort', label: 'ABORT Pressed' },
+    { id: 'abort2', type: 'smoothstep', source: 'safetyChecks', target: 'safeAbort', label: 'ABORT Pressed' },
+    { id: 'abort3', type: 'smoothstep', source: 'safeToArm', target: 'safeAbort', label: 'ABORT Pressed' },
+    { id: 'abort4', type: 'smoothstep', source: 'arm', target: 'safeAbort', label: 'ABORT Pressed' },
+    { id: 'abort5', type: 'smoothstep', source: 'acceleration', target: 'safeAbort', label: 'ABORT Pressed OR Fault Condition Detected' },
   ];
